@@ -163,6 +163,7 @@ mm.enable.sec.smoothstreaming=false
 mm.enable.smoothstreaming=false
 mmp.enable.3g2=true
 vidc.disable.split.mode=1
+persist.media.treble_omx=false
 
 # Qualcomm
 com.qc.hardware=true
