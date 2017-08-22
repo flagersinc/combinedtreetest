@@ -156,6 +156,10 @@ PRODUCT_PACKAGES += \
     libgnsspps \
     gps.$(TARGET_BOARD_PLATFORM)
 
+# HIDL
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/manifest.xml:system/vendor/manifest.xml
+
 # IPA Manager
 PRODUCT_PACKAGES += \
     ipacm \
