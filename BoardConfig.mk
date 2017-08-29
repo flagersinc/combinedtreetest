@@ -140,11 +140,6 @@ TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 BOARD_USES_QCOM_HARDWARE := true
 BOARD_VENDOR := motorola-qcom
 
-
-# Radio
-BOARD_PROVIDES_LIBRIL := true
-BOARD_PROVIDES_RILD := true
-
 # Recovery
 BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.qcom
