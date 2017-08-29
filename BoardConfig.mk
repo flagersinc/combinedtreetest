@@ -20,7 +20,10 @@ include vendor/motorola/msm8937-common/BoardConfigVendor.mk
 
 DEVICE_PATH := device/motorola/owens
 
-TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
+# AIDs and CAPS
+TARGET_FS_CONFIG_GEN := \
+    $(DEVICE_PATH)/fs_config/motorola_aids.txt \
+    $(DEVICE_PATH)/fs_config/file_caps.txt
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := owens,owens_retail
