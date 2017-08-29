@@ -21,6 +21,9 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_PACKAGES += \
+    android.hardware.audio@2.0-impl \
+    android.hardware.audio.effect@2.0-impl \
+    android.hardware.broadcastradio@1.0-impl \
     audiod \
     audio.a2dp.default \
     audio.primary.$(TARGET_BOARD_PLATFORM) \
@@ -58,6 +61,7 @@ PRODUCT_COPY_FILES += \
 
 # Bluetooth
 PRODUCT_PACKAGES += \
+    android.hardware.bluetooth@1.0-impl \
     libbt-vendor
 
 # Camera
@@ -68,6 +72,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     camera.$(TARGET_BOARD_PLATFORM) \
+    android.hardware.camera.provider@2.4-impl \
     libbson \
     Snap
 
@@ -128,6 +133,12 @@ PRODUCT_PACKAGES += \
     copybit.$(TARGET_BOARD_PLATFORM) \
     hwcomposer.$(TARGET_BOARD_PLATFORM) \
     memtrack.$(TARGET_BOARD_PLATFORM) \
+    android.hardware.graphics.allocator@2.0-impl \
+    android.hardware.graphics.allocator@2.0-service \
+    android.hardware.graphics.composer@2.1-impl \
+    android.hardware.graphics.mapper@2.0-impl \
+    android.hardware.memtrack@1.0-impl \
+    android.hardware.renderscript@1.0-impl \
     libtinyxml
 
 # Display Calibration
@@ -139,6 +150,7 @@ PRODUCT_COPY_FILES += \
 
 # DRM
 PRODUCT_PACKAGES += \
+    android.hardware.drm@1.0-impl \
     libprotobuf-cpp-lite
 
 # Ebtables
@@ -149,10 +161,15 @@ PRODUCT_PACKAGES += \
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    fingerprintd
+    android.hardware.biometrics.fingerprint@2.1-service
+
+# Gatekeeper
+PRODUCT_PACKAGES += \
+    android.hardware.gatekeeper@1.0-impl
 
 # GPS
 PRODUCT_PACKAGES += \
+    android.hardware.gnss@1.0-impl \
     libgnsspps \
     gps.$(TARGET_BOARD_PLATFORM)
 
@@ -173,9 +190,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/fpc1020.kl:system/usr/keylayout/fpc1020.kl
 
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@3.0-impl
+
 # Lights
 PRODUCT_PACKAGES += \
-    lights.$(TARGET_BOARD_PLATFORM)
+    lights.$(TARGET_BOARD_PLATFORM) \
+    android.hardware.light@2.0-impl
 
 # Media
 PRODUCT_PACKAGES += \
@@ -196,9 +218,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nxp_ds.conf:system/etc/libnfc-nxp_ds.conf \
 
 PRODUCT_PACKAGES += \
+    android.hardware.nfc@1.0-impl \
     libnfc \
     libnfc_jni \
-    nfc_nci.pn54x.default \
+    nfc_nci.owens \
     NfcNci \
     Tag \
     com.android.nfc_extras
@@ -217,7 +240,8 @@ PRODUCT_PACKAGES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.$(TARGET_BOARD_PLATFORM)
+    power.$(TARGET_BOARD_PLATFORM) \
+    android.hardware.power@1.0-impl
 
 # Ramdisk
 PRODUCT_PACKAGES += \
@@ -258,12 +282,23 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf
 
-# Substratum
-PRODUCT_PACKAGES += \
-    ThemeInterfacer
-
 # Telephony
 PRODUCT_PACKAGES += telephony-ext
+
+PRODUCT_PACKAGES += \
+    android.hardware.sensors@1.0-impl \
+
+
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-impl \
+
+# USB
+PRODUCT_PACKAGES += \
+    android.hardware.usb@1.0-service
+
+# Vibrator HAL
+PRODUCT_PACKAGES += \
+    android.hardware.vibrator@1.0-impl
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -277,6 +312,7 @@ PRODUCT_PACKAGES += \
     wpa_supplicant_overlay.conf
 
 PRODUCT_PACKAGES += \
+    android.hardware.wifi@1.0-service \
     libqsap_sdk \
     libQWiFiSoftApCfg \
     tcpdump \
