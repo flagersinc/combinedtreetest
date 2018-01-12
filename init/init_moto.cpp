@@ -49,3 +49,29 @@ void vendor_load_properties()
     property_set("ro.hw.device", device.c_str());
     property_set("ro.hw.radio", radio.c_str());
 }
+
+void cdma_properties()
+{
+    property_set("DEVICE_PROVISIONED","1");
+    property_set("gsm.sim.operator.iso-country", "US");
+    property_set("gsm.operator.iso-country", "US");
+    property_set("ril.subscription.types","NV,RUIM");
+    property_set("ro.telephony.default_cdma_sub", "0");
+    property_set("ro.product.locale.region", "US");
+    property_set("ro.telephony.default_network", "8");
+    property_set("telephony.lteOnCdmaDevice", "1");
+}
+
+void gsm_properties(bool msim)
+{
+    property_set("telephony.lteOnGsmDevice", "1");
+    property_set("ro.telephony.default_network", "9");
+    if (msim) {
+        property_set("persist.radio.dont_use_dsd", "true");
+        property_set("persist.radio.multisim.config", "dsds");
+        property_set("persist.radio.plmn_name_cmp", "1");
+        property_set("ro.telephony.ril.config", "simactivation");
+    } else {
+        property_set("persist.radio.multisim.config", "");
+    }
+}
