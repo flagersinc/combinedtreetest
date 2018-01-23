@@ -21,7 +21,6 @@ DEVICE_PATH := device/motorola/owens
 
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := owens,owens_retail
-
 TARGET_KERNEL_CONFIG := owens_defconfig
 
 # Partitions
