@@ -22,6 +22,7 @@ DEVICE_PATH := device/motorola/owens
 # Asserts
 TARGET_OTA_ASSERT_DEVICE := owens,owens_retail
 TARGET_KERNEL_CONFIG := owens_defconfig
+TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
 # Partitions
 BOARD_SYSTEMIMAGE_PARTITION_SIZE := 3623878656    #  3538944 * 1024 mmcblk0p53
