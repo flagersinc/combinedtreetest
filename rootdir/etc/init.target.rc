@@ -69,6 +69,8 @@ on boot
 
 # Egistec fingerprint feature
 on post-fs-data
+    copy /system/etc/eri.xml /data/eri.xml
+    chmod 0644 /data/eri.xml
     mkdir /data/misc/egistec 0700 system system
     chmod 0660 /sys/devices/platform/egis_input/navigation_event
     chmod 0660 /sys/devices/platform/egis_input/navigation_enable
