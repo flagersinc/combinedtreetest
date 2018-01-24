@@ -233,15 +233,7 @@ PRODUCT_PACKAGES += \
     ThemeInterfacer
 
 # Telephony
-PRODUCT_PACKAGES += \
-    rcscommon \
-    rcs_service_aidl \
-    rcs_service_api
-
-PRODUCT_PACKAGES += \
-    rcscommon.xml \
-    rcs_service_aidl.xml \
-    rcs_service_api.xml
+PRODUCT_PACKAGES += telephony-ext
 
 # Wifi
 PRODUCT_PACKAGES += \
