@@ -1,2 +1,2 @@
-allow rmt_storage self:capability net_raw;
+allow rmt_storage self:capability dac_override;
 r_dir_file(rmt_storage, fsg_file)

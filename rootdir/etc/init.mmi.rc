@@ -35,7 +35,7 @@ on post-fs
     mkdir /persist/public/atvc 0770 mot_atvc shell
     mkdir /persist/public/battd 0755 mot_accy mot_tcmd
     mkdir /persist/public/att_dm 0775 radio mot_tcmd
-    mkdir /persist/public/hiddenmenu 0755 radio mot_tcmd
+    mkdir /persist/public/hiddenmenu 0755 radio radio
     mkdir /persist/public/hiddenmenu/data 0775 system mot_tcmd
     mkdir /persist/public/locale 0700 system system
     mkdir /persist/public/omadm 0700 radio radio
@@ -265,12 +265,12 @@ on moto-charger
     start thermal-com
 
 on property:ro.boot.dualsim=true
-    setprop persist.radio.multisim.config dsds
-    setprop ro.telephony.default_network 10,10
+   setprop persist.radio.multisim.config dsds
+   setprop ro.telephony.default_network 10,10
 
 on property:ro.boot.dualsim=false
-    setprop persist.radio.multisim.config ""
-    setprop ro.telephony.default_network 10
+   setprop persist.radio.multisim.config ""
+   setprop ro.telephony.default_network 10
 
 service adspd /system/bin/adspd
    seclabel u:r:adspd:s0
