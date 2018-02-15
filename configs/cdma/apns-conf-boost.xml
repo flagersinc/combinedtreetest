@@ -12,5 +12,8 @@
 
 	<!-- APN database for Boost support -->
 	<apn carrier="Boost" numeric="310120" mcc="310" mnc="120" apn="n.boost.ispsn" user="" server="" password="" proxy="null" port="null" mmsproxy="68.28.31.7" mmsport="80" mmsprotocol="null" mmsc="http://mm.myboostmobile.com" type="default,supl,mms,fota,dun" bearer_bitmask="13|14" />
+    <apn carrier="Boost" mcc="311" mnc="870" apn="cinet.spcs" mmsc="http://mm.myboostmobile.com" mmsproxy="68.28.31.7" mmsport="80" type="default,supl,mms,dun,fota" protocol="IP" roaming_protocol="IP" />
+	<apn carrier="LTE - Boost OTA" mcc="311" mnc="870" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="14" />
+    <apn carrier="EHRPD - Boost OTA" mcc="311" mnc="870" apn="otasn" type="fota" protocol="IPV4V6" roaming_protocol="IPV4V6" bearer="13" />
 	<!-- END APN database for Boost support -->
 </apns>
