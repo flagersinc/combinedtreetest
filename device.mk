@@ -18,7 +18,9 @@ $(call inherit-product, device/motorola/msm8937-common/msm8937.mk)
 
 # APN Config for Stock
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/stockapn/apns-conf.xml:system/etc/stockapn/apns-conf.xml
+    $(LOCAL_PATH)/configs/stockapn/apns-conf.xml:system/etc/stockapn/apns-conf.xml \
+    $(LOCAL_PATH)/configs/stockapn/apns-conf-boost.xml:system/etc/stockapn/apns-conf-boost.xml \
+    $(LOCAL_PATH)/configs/stockapn/apns-conf-sprint.xml:system/etc/stockapn/apns-conf-sprint.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
