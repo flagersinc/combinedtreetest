@@ -16,6 +16,10 @@
 # Inherit from msm8937-common
 $(call inherit-product, device/motorola/msm8937-common/msm8937.mk)
 
+# APN Config for Stock
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/stockapn/apns-conf.xml:system/etc/stockapn/apns-conf.xml
+
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
@@ -27,19 +31,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8917_mot_owens_camera.xml:system/etc/camera/msm8917_mot_owens_camera.xml \
     $(LOCAL_PATH)/configs/camera/ar1335_chromatix.xml:system/etc/camera/ar1335_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695fa0_chromatix.xml:system/etc/camera/mot_ov5695_l5695fa0_chromatix.xml
-
-# CDMA custom apns and eris
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-boost.xml:system/etc/cdma/apns-conf-boost.xml \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-frdm.xml:system/etc/cdma/apns-conf-frdm.xml \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-rngplus.xml:system/etc/cdma/apns-conf-rngplus.xml \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-sprint.xml:system/etc/cdma/apns-conf-sprint.xml \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-vzw.xml:system/etc/cdma/apns-conf-vzw.xml \
-    $(LOCAL_PATH)/configs/cdma/apns-conf-virgin.xml:system/etc/cdma/apns-conf-virgin.xml \
-    $(LOCAL_PATH)/configs/cdma/eri-boost.xml:system/etc/cdma/eri-boost.xml \
-    $(LOCAL_PATH)/configs/cdma/eri-frdm.xml:system/etc/cdma/eri-frdm.xml \
-    $(LOCAL_PATH)/configs/cdma/eri-rngplus.xml:system/etc/cdma/eri-rngplus.xml \
-    $(LOCAL_PATH)/configs/cdma/eri-virgin.xml:system/etc/cdma/eri-virgin.xml
 
 # Ramdisk
 PRODUCT_PACKAGES += \
