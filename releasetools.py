@@ -37,4 +37,4 @@ def RestoreApnList(info):
   info.script.AppendExtra('delete("/system/etc/apns-conf.xml");')
   info.script.AppendExtra('run_program("/sbin/sh", "-c", "mv /system/etc/apns-conf.xml.bak /system/etc/apns-conf.xml");')
   info.script.Unmount("/system")
-info.script.AppendExtra('endif;')
+  info.script.AppendExtra('endif;')
