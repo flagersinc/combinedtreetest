@@ -5,9 +5,8 @@
 <apns version="8">
   <apn carrier="Boost MMS" mcc="310" mnc="120" apn="x.boost.ispsn" type="mms" mmsc="http://mm.myboostmobile.com" mmsproxy="oap7.sprintpcs.com" mmsport="80" user_visible="false" />
   <apn carrier="Sprint MMS" mcc="310" mnc="120" apn="x.ispsn" type="mms" mmsc="http://mms.sprintpcs.com" mmsproxy="oap7.sprintpcs.com" mmsport="80" user_visible="false" />
-  <apn carrier="Virgin Test MMS" mcc="311" mnc="490" apn="" type="mms" mmsc="http://mmsc.vmobl.com:8088" mmsproxy="68.28.31.2" mmsport="80" user_visible="false" />
-  <apn carrier="Virgin Test MMS" mcc="310" mnc="120" apn="x.vmu.ispsn" type="mms" mmsc="http://mmsc.vmobl.com:8088/mms?" mmsproxy="oap7.sprintpcs.com" mmsport="80" user_visible="false" />
-  <apn carrier="Sprint FALLBACK MMS" mcc="310" mnc="120" type="mms" mmsc="http://mms.sprintpcs.com" mmsproxy="oap7.sprintpcs.com" mmsport="80" user_visible="false" />
+  <apn carrier="Virgin MMS" mcc="311" mnc="490" apn="" type="mms" mmsc="http://mmsc.vmobl.com:8088" mmsproxy="68.28.31.2" mmsport="80" user_visible="false" />
+  <apn carrier="Virgin MMS" mcc="310" mnc="120" apn="" type="mms" mmsc="http://mmsc.vmobl.com:8088" mmsproxy="68.28.31.2" mmsport="80" user_visible="false" />
   <apn carrier="Cosmote Internet" mcc="202" mnc="01" apn="internet" type="default,supl" protocol="IPV4V6" />
   <apn carrier="Cosmote MMS" mcc="202" mnc="01" apn="mms" type="mms" mmsc="http://mmsc.cosmote.gr:8002" mmsproxy="10.10.10.20" mmsport="8080" />
   <apn carrier="VF Internet" mcc="202" mnc="05" apn="internet.vodafone.gr" type="default,supl,agps,fota,dun" authtype="0" user="user" password="pass" />

@@ -18,10 +18,11 @@ $(call inherit-product, device/motorola/msm8937-common/msm8937.mk)
 
 # APN Config for Stock
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/stockapn/apns-conf.xml:system/etc/stockapn/apns-conf.xml \
+    $(LOCAL_PATH)/configs/stockapn/apns-conf.xml:system/etc/stockapn/apns-conf.xml
 
 # Audio
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio_policy.conf:system/etc/audio_policy.conf \
     $(LOCAL_PATH)/configs/mixer_paths.xml:system/etc/mixer_paths.xml \
     $(LOCAL_PATH)/configs/audio_platform_info.xml:system/etc/audio_platform_info.xml \
     $(LOCAL_PATH)/configs/audio_platform_info_extcodec.xml:system/etc/audio_platform_info_extcodec.xml
@@ -31,6 +32,14 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/msm8917_mot_owens_camera.xml:system/etc/camera/msm8917_mot_owens_camera.xml \
     $(LOCAL_PATH)/configs/camera/ar1335_chromatix.xml:system/etc/camera/ar1335_chromatix.xml \
     $(LOCAL_PATH)/configs/camera/mot_ov5695_l5695fa0_chromatix.xml:system/etc/camera/mot_ov5695_l5695fa0_chromatix.xml
+
+# CMActions
+#PRODUCT_PACKAGES += CMActions
+
+# FM
+PRODUCT_PACKAGES += \
+    FMRadio \
+    libfmjni
 
 # Ramdisk
 PRODUCT_PACKAGES += \
