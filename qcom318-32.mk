@@ -22,6 +22,7 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
     external/ant-wireless/antradio-library/com.dsi.ant.antradio_library.xml:system/etc/permissions/com.dsi.ant.antradio_library.xml \
+    frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
     frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
     frameworks/native/data/etc/android.hardware.bluetooth_le.xml:system/etc/permissions/android.hardware.bluetooth_le.xml \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -58,7 +59,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-dalvik-heap.mk)
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
-
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService \
@@ -79,6 +79,7 @@ PRODUCT_PACKAGES += \
     libshim_adsp \
     tinymix
 
+
 PRODUCT_COPY_FILES +=  \
     $(LOCAL_PATH)/audio/audio_effects.conf:system/vendor/etc/audio_effects.conf \
     $(LOCAL_PATH)/audio/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
@@ -96,10 +97,6 @@ PRODUCT_PACKAGES += \
     camera.$(TARGET_BOARD_PLATFORM) \
     libbson \
     Snap
-
-# CMActions
-#PRODUCT_PACKAGES += \
-#    CMActions
 
 # Display
 PRODUCT_PACKAGES += \
@@ -129,11 +126,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     fingerprintd
-
-# FM
-#PRODUCT_PACKAGES += \
-#    FMRadio \
-#    libfmjni
 
 # For android_filesystem_config.h
 PRODUCT_PACKAGES += \
