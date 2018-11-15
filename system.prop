@@ -187,7 +187,6 @@ ro.vendor.gt_library=libqti-gt.so
 persist.net.doxlat=true
 
 # ADDITONAL
-ro.radio.imei.sv=2
 ro.mot.ignore_csim_appid=true
 ro.cutoff_voltage_mv=3200
 sys.wifi.tethering=true
