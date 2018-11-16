@@ -323,6 +323,7 @@
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
+    <add-resource type="integer"  name="config_deviceHardwareWakeKeys"></add-resource>    
     <integer name="config_deviceHardwareWakeKeys">64</integer>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
