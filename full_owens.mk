@@ -22,6 +22,3 @@ PRODUCT_DEVICE := owens
 PRODUCT_NAME := full_owens
 
 $(call inherit-product-if-exists, vendor/motorola/owens/owens-vendor.mk)
-$(call inherit-product-if-exists, vendor/motorola/qcom318-32/qcom318-32-vendor.mk)
-$(call inherit-product-if-exists, vendor/motorola/msm8937-common/BoardConfigVendor.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)

@@ -14,9 +14,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-include vendor/motorola/owens/BoardConfigVendor.mk
+include vendor/motorola/msm8937-common/BoardConfigVendor.mk
+-include vendor/motorola/owens/BoardConfigVendor.mk
 -include vendor/motorola/qcom318-32/BoardConfigVendor.mk
--include vendor/motorola/msm8937-common/BoardConfigVendor.mk
 
 DEVICE_PATH := device/motorola/owens
 
