@@ -18,6 +18,8 @@ $(call inherit-product, device/motorola/owens/full_owens.mk)
 # Boot animation
 TARGET_SCREEN_WIDTH := 720
 TARGET_SCREEN_HEIGHT := 1280
+TARGET_BOOTANIMATION_NAME := 1080
+TARGET_BOOTANIMATION_SIZE := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := owens
